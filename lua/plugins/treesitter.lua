@@ -9,6 +9,7 @@ return {
 	    },
 	    indent = { enable = true },
 	    autotage = { enable = true },
+        autopairs = {enable = true },
 	    ensure_installed = {
 		"lua",
 		"c",

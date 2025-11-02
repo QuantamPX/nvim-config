@@ -50,7 +50,7 @@ return {
       -- local capabilities = require("cmp_nvim_lsp").default_capabilities()
       local capabilities = require('blink.cmp').get_lsp_capabilities()
       local lspconfig = require("lspconfig")
-      local util = require("lspconfig").util
+      local util = require("lspconfig.util")
       local configs = require("lspconfig.configs")
 
       lspconfig.cmake.setup({
@@ -86,7 +86,7 @@ return {
         configs.roc_ls = {
           default_config = {
             cmd = { "roc_language_server", "--stdio" },
-            capabilties = capabilities,
+            capablities = capabilities,
             filetypes = {
               "roc",
             },
@@ -238,7 +238,7 @@ return {
         configs.ts_ls = {
           default_config = {
             cmd = { "typescript-language-server", "--stdio" },
-            capabilties = capabilities,
+            capablities = capabilities,
             filetypes = {
               "javascript",
               "javascriptreact",
@@ -252,7 +252,7 @@ return {
         }
       end
       lspconfig.ts_ls.setup({
-        -- capabilties = capabilities,
+        -- capablities = capabilities,
         -- cmd = { "typescript-language-server", "--stdio" },
         -- filetypes = {
         --   "javascript",
@@ -265,7 +265,7 @@ return {
         -- single_file_support = true,
       })
       lspconfig.eslint.setup({
-        capabilties = capabilities,
+        capablities = capabilities,
       })
 
       require("lspconfig").clangd.setup({
@@ -313,7 +313,7 @@ return {
 
       -- lspconfig.pylsp.setup({
       --   cmd = { "pylsp" },
-      --   capabilties = capabilities,
+      --   capablities = capabilities,
       --   root_dir = function(fname)
       --     local root_files = {
       --       'pyproject.toml',
@@ -334,29 +334,29 @@ return {
       -- })
 
       lspconfig.marksman.setup({
-        capabilties = capabilities,
+        capablities = capabilities,
       })
       lspconfig.gleam.setup({
-        capabilties = capabilities,
+        capablities = capabilities,
       })
       lspconfig.nim_langserver.setup({
-        capabilties = capabilities,
+        capablities = capabilities,
       })
       lspconfig.omnisharp.setup({
-        capabilties = capabilities,
+        capablities = capabilities,
         cmd = { "OmniSharp" },
       })
       lspconfig.fennel_ls.setup({
-        capabilties = capabilities,
+        capablities = capabilities,
         cmd = { "fennel-ls" },
       })
       lspconfig.rescriptls.setup({
-        capabilties = capabilities,
+        capablities = capabilities,
         cmd = { "rescript-language-server", "--stdio" },
         root_dir = require("lspconfig").util.root_pattern("rescript.json"),
       })
       lspconfig.julials.setup({
-        capabilties = capabilities,
+        capablities = capabilities,
         cmd = { "julia-lsp" },
         root_dir = require("lspconfig").util.root_pattern("*.jl"),
       })
